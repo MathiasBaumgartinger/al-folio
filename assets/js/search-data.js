@@ -58,7 +58,18 @@ ninja.data = [{
               handler: () => {
                 window.location.href = "/al-folio/blog/";
               },
-            },{id: "post-a-post-with-plotly-js",
+            },{id: "post-extending-django-knox-by-secure-refresh-tokens",
+        
+          title: "Extending Django Knox by secure refresh-tokens",
+        
+        description: "How Django-Rest-Knox auth-system can be extended: short-lived access tokens, HTTP-only refresh cookies, rotation, CSRF, and clean session semantics.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/al-folio/blog/2025/knox+refresh/";
+          
+        },
+      },{id: "post-a-post-with-plotly-js",
         
           title: "a post with plotly.js",
         
@@ -217,32 +228,7 @@ ninja.data = [{
             },},{id: "news-a-simple-inline-announcement-with-markdown-emoji-sparkles-smile",
           title: 'A simple inline announcement with Markdown emoji! :sparkles: :smile:',
           description: "",
-          section: "News",},{id: "projects-project-1",
-          title: 'project 1',
-          description: "with background image",
-          section: "Projects",handler: () => {
-              window.location.href = "/al-folio/projects/1_project/";
-            },},{id: "projects-project-3-with-very-long-name",
-          title: 'project 3 with very long name',
-          description: "a project that redirects to another website",
-          section: "Projects",handler: () => {
-              window.location.href = "/al-folio/projects/3_project/";
-            },},{id: "projects-project-7",
-          title: 'project 7',
-          description: "with background image",
-          section: "Projects",handler: () => {
-              window.location.href = "/al-folio/projects/7_project/";
-            },},{id: "projects-project-8",
-          title: 'project 8',
-          description: "an other project with a background image and giscus comments",
-          section: "Projects",handler: () => {
-              window.location.href = "/al-folio/projects/8_project/";
-            },},{id: "projects-project-9",
-          title: 'project 9',
-          description: "another project with an image 🎉",
-          section: "Projects",handler: () => {
-              window.location.href = "/al-folio/projects/9_project/";
-            },},{id: "projects-biopv",
+          section: "News",},{id: "projects-biopv",
           title: 'BioPV',
           description: "Photovoltaics, people and the biosphere: a transdisciplinary approach",
           section: "Projects",handler: () => {

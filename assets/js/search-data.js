@@ -278,11 +278,21 @@ ninja.data = [{
           description: "A Godot plugin for loading geospatial data.",
           section: "Projects",handler: () => {
               window.location.href = "/al-folio/projects/work/geodot/";
+            },},{id: "projects-godot-vr-toolkit",
+          title: 'Godot VR Toolkit',
+          description: "Utility framework for working with VR in godot.",
+          section: "Projects",handler: () => {
+              window.location.href = "/al-folio/projects/work/godot-vr-toolkit/";
             },},{id: "projects-landscapelab",
           title: 'LandscapeLab',
           description: "An open kit for developing game-based participatory landscape-planning tools.",
           section: "Projects",handler: () => {
               window.location.href = "/al-folio/projects/work/landscapelab/";
+            },},{id: "projects-web-gis-questionnaire",
+          title: 'Web GIS – Questionnaire',
+          description: "Generically configurable questionnaire as web GIS.",
+          section: "Projects",handler: () => {
+              window.location.href = "/al-folio/projects/work/webgis/";
             },},{id: "talks-visualizing-austria-in-godot",
           title: 'Visualizing Austria in Godot',
           description: "",

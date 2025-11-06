@@ -44,21 +44,7 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/al-folio/cv/";
           },
-        },{id: "dropdown-bookshelf",
-              title: "bookshelf",
-              description: "",
-              section: "Dropdown",
-              handler: () => {
-                window.location.href = "/al-folio/books/";
-              },
-            },{id: "dropdown-blog",
-              title: "blog",
-              description: "",
-              section: "Dropdown",
-              handler: () => {
-                window.location.href = "/al-folio/blog/";
-              },
-            },{id: "post-extending-django-knox-by-secure-refresh-tokens",
+        },{id: "post-extending-django-knox-by-secure-refresh-tokens",
         
           title: "Extending Django Knox by secure refresh-tokens",
         

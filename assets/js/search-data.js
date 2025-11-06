@@ -7,42 +7,42 @@ ninja.data = [{
     title: "About",
     section: "Navigation",
     handler: () => {
-      window.location.href = "/al-folio/";
+      window.location.href = "/";
     },
   },{id: "nav-blog",
           title: "Blog",
           description: "",
           section: "Navigation",
           handler: () => {
-            window.location.href = "/al-folio/blog/";
+            window.location.href = "/blog/";
           },
         },{id: "nav-dissemination",
           title: "Dissemination",
           description: "",
           section: "Navigation",
           handler: () => {
-            window.location.href = "/al-folio/publications/";
+            window.location.href = "/publications/";
           },
         },{id: "nav-projects",
           title: "Projects",
           description: "Open projects and contributions I have worked on.",
           section: "Navigation",
           handler: () => {
-            window.location.href = "/al-folio/projects/";
+            window.location.href = "/projects/";
           },
         },{id: "nav-repositories",
           title: "Repositories",
           description: "",
           section: "Navigation",
           handler: () => {
-            window.location.href = "/al-folio/repositories/";
+            window.location.href = "/repositories/";
           },
         },{id: "nav-cv",
           title: "CV",
           description: "",
           section: "Navigation",
           handler: () => {
-            window.location.href = "/al-folio/cv/";
+            window.location.href = "/cv/";
           },
         },{id: "post-extending-django-knox-by-secure-refresh-tokens",
         
@@ -52,7 +52,7 @@ ninja.data = [{
         section: "Posts",
         handler: () => {
           
-            window.location.href = "/al-folio/blog/2025/knox+refresh/";
+            window.location.href = "/blog/2025/knox+refresh/";
           
         },
       },{id: "post-a-post-with-plotly-js",
@@ -63,7 +63,7 @@ ninja.data = [{
         section: "Posts",
         handler: () => {
           
-            window.location.href = "/al-folio/blog/2025/plotly/";
+            window.location.href = "/blog/2025/plotly/";
           
         },
       },{id: "post-a-post-with-image-galleries",
@@ -74,7 +74,7 @@ ninja.data = [{
         section: "Posts",
         handler: () => {
           
-            window.location.href = "/al-folio/blog/2024/photo-gallery/";
+            window.location.href = "/blog/2024/photo-gallery/";
           
         },
       },{id: "post-google-gemini-updates-flash-1-5-gemma-2-and-project-astra",
@@ -96,7 +96,7 @@ ninja.data = [{
         section: "Posts",
         handler: () => {
           
-            window.location.href = "/al-folio/blog/2024/tabs/";
+            window.location.href = "/blog/2024/tabs/";
           
         },
       },{id: "post-a-post-with-typograms",
@@ -107,7 +107,7 @@ ninja.data = [{
         section: "Posts",
         handler: () => {
           
-            window.location.href = "/al-folio/blog/2024/typograms/";
+            window.location.href = "/blog/2024/typograms/";
           
         },
       },{id: "post-a-post-that-can-be-cited",
@@ -118,7 +118,7 @@ ninja.data = [{
         section: "Posts",
         handler: () => {
           
-            window.location.href = "/al-folio/blog/2024/post-citation/";
+            window.location.href = "/blog/2024/post-citation/";
           
         },
       },{id: "post-a-post-with-pseudo-code",
@@ -129,7 +129,7 @@ ninja.data = [{
         section: "Posts",
         handler: () => {
           
-            window.location.href = "/al-folio/blog/2024/pseudocode/";
+            window.location.href = "/blog/2024/pseudocode/";
           
         },
       },{id: "post-a-post-with-vega-lite",
@@ -140,7 +140,7 @@ ninja.data = [{
         section: "Posts",
         handler: () => {
           
-            window.location.href = "/al-folio/blog/2024/vega-lite/";
+            window.location.href = "/blog/2024/vega-lite/";
           
         },
       },{id: "post-a-post-with-custom-blockquotes",
@@ -151,7 +151,7 @@ ninja.data = [{
         section: "Posts",
         handler: () => {
           
-            window.location.href = "/al-folio/blog/2023/custom-blockquotes/";
+            window.location.href = "/blog/2023/custom-blockquotes/";
           
         },
       },{id: "post-displaying-beautiful-tables-with-bootstrap-tables",
@@ -162,7 +162,7 @@ ninja.data = [{
         section: "Posts",
         handler: () => {
           
-            window.location.href = "/al-folio/blog/2023/tables/";
+            window.location.href = "/blog/2023/tables/";
           
         },
       },{id: "post-displaying-external-posts-on-your-al-folio-blog",
@@ -184,7 +184,7 @@ ninja.data = [{
         section: "Posts",
         handler: () => {
           
-            window.location.href = "/al-folio/blog/2021/distill/";
+            window.location.href = "/blog/2021/distill/";
           
         },
       },{id: "post-a-post-with-code",
@@ -195,14 +195,14 @@ ninja.data = [{
         section: "Posts",
         handler: () => {
           
-            window.location.href = "/al-folio/blog/2015/code/";
+            window.location.href = "/blog/2015/code/";
           
         },
       },{id: "books-the-godfather",
           title: 'The Godfather',
           description: "",
           section: "Books",handler: () => {
-              window.location.href = "/al-folio/books/the_godfather/";
+              window.location.href = "/books/the_godfather/";
             },},{id: "news-a-simple-inline-announcement",
           title: 'A simple inline announcement.',
           description: "",
@@ -210,7 +210,7 @@ ninja.data = [{
           title: 'A long announcement with details',
           description: "",
           section: "News",handler: () => {
-              window.location.href = "/al-folio/news/announcement_2/";
+              window.location.href = "/news/announcement_2/";
             },},{id: "news-a-simple-inline-announcement-with-markdown-emoji-sparkles-smile",
           title: 'A simple inline announcement with Markdown emoji! :sparkles: :smile:',
           description: "",
@@ -218,72 +218,72 @@ ninja.data = [{
           title: 'BioPV',
           description: "Photovoltaics, people and the biosphere: a transdisciplinary approach",
           section: "Projects",handler: () => {
-              window.location.href = "/al-folio/projects/academia/biopv/";
+              window.location.href = "/projects/academia/biopv/";
             },},{id: "projects-pa-c",
           title: 'PA³C³',
           description: "APV climate change mitigation assessment considering (techno-)economic, environmental and social aspects.",
           section: "Projects",handler: () => {
-              window.location.href = "/al-folio/projects/academia/pa3c3/";
+              window.location.href = "/projects/academia/pa3c3/";
             },},{id: "projects-plusiq",
           title: 'PlusIQ',
           description: "APV: Integration as a path to a plus-energy district (evaluation of social acceptance by visualization).",
           section: "Projects",handler: () => {
-              window.location.href = "/al-folio/projects/academia/plusiq/";
+              window.location.href = "/projects/academia/plusiq/";
             },},{id: "projects-park-working-spaces-pws",
           title: 'Park-Working-Spaces (PWS)',
           description: "Development of energy-autonomous, app-controlled open-space workplaces in public parks in Vienna",
           section: "Projects",handler: () => {
-              window.location.href = "/al-folio/projects/academia/pws/";
+              window.location.href = "/projects/academia/pws/";
             },},{id: "projects-retour",
           title: 'ReTour',
           description: "Social acceptance of future photovoltaic and wind energy scenarios in Austrian tourism regions",
           section: "Projects",handler: () => {
-              window.location.href = "/al-folio/projects/academia/retour/";
+              window.location.href = "/projects/academia/retour/";
             },},{id: "projects-wimby",
           title: 'WIMBY',
           description: "Development of innovative tools to facilitate citizen and stakeholders interaction, knowledge sharing, and collaborative evaluation of impacts, conflicts, synergies and social innovation potential of wind energy.",
           section: "Projects",handler: () => {
-              window.location.href = "/al-folio/projects/academia/wimby/";
+              window.location.href = "/projects/academia/wimby/";
             },},{id: "projects-body-part-fighter",
           title: 'Body Part Fighter',
           description: "Build creatures out of scrap body parts and fight with them!",
           section: "Projects",handler: () => {
-              window.location.href = "/al-folio/projects/game-jam/body-part-fighter/";
+              window.location.href = "/projects/game-jam/body-part-fighter/";
             },},{id: "projects-mu-µ",
           title: 'Mu (µ)',
           description: "µ - A 2D platformer about shapes and home.",
           section: "Projects",handler: () => {
-              window.location.href = "/al-folio/projects/game-jam/mu/";
+              window.location.href = "/projects/game-jam/mu/";
             },},{id: "projects-millionaire-quiz",
           title: 'Millionaire Quiz',
           description: "A millionaire quiz template meant for easy personalization. Makes a great fit for the next wedding, bachelor&#39;s, or birthday party or just testing your friends.",
           section: "Projects",handler: () => {
-              window.location.href = "/al-folio/projects/hobby/millionaire-quiz/";
+              window.location.href = "/projects/hobby/millionaire-quiz/";
             },},{id: "projects-geodot",
           title: 'Geodot',
           description: "A Godot plugin for loading geospatial data.",
           section: "Projects",handler: () => {
-              window.location.href = "/al-folio/projects/work/geodot/";
+              window.location.href = "/projects/work/geodot/";
             },},{id: "projects-godot-vr-toolkit",
           title: 'Godot VR Toolkit',
           description: "Utility framework for working with VR in godot.",
           section: "Projects",handler: () => {
-              window.location.href = "/al-folio/projects/work/godot-vr-toolkit/";
+              window.location.href = "/projects/work/godot-vr-toolkit/";
             },},{id: "projects-landscapelab",
           title: 'LandscapeLab',
           description: "An open kit for developing game-based participatory landscape-planning tools.",
           section: "Projects",handler: () => {
-              window.location.href = "/al-folio/projects/work/landscapelab/";
+              window.location.href = "/projects/work/landscapelab/";
             },},{id: "projects-web-gis-questionnaire",
           title: 'Web GIS – Questionnaire',
           description: "Generically configurable questionnaire as web GIS.",
           section: "Projects",handler: () => {
-              window.location.href = "/al-folio/projects/work/webgis/";
+              window.location.href = "/projects/work/webgis/";
             },},{id: "talks-visualizing-austria-in-godot",
           title: 'Visualizing Austria in Godot',
           description: "",
           section: "Talks",handler: () => {
-              window.location.href = "/al-folio/talks/godotcon/";
+              window.location.href = "/talks/godotcon/";
             },},{
         id: 'social-bluesky',
         title: 'Bluesky',
@@ -331,7 +331,7 @@ ninja.data = [{
         title: 'RSS Feed',
         section: 'Socials',
         handler: () => {
-          window.open("/al-folio/feed.xml", "_blank");
+          window.open("/feed.xml", "_blank");
         },
       },{
         id: 'social-scholar',

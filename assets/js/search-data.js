@@ -88,6 +88,17 @@ ninja.data = [{
             window.location.href = "/blog/2024/istanbul/";
           
         },
+      },{id: "post-catenary-objects-putting-a-wire-between-two-points-in-3d",
+        
+          title: "Catenary objects: putting a wire between two points (in 3D)",
+        
+        description: "Modelling a hanging physically/geometrically correct chain supported only at its endpoints.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2022/catenary/";
+          
+        },
       },{id: "post-pretend-a-mouse-vr-gui-in-godot",
         
           title: "Pretend a Mouse: VR-GUI in Godot",

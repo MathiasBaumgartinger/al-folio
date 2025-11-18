@@ -15,7 +15,6 @@
 {% endif %}
 
 {% capture author_name %}{{ site.first_name }}{% if site.middle_name %} {{ site.middle_name }}{% endif %} {{ site.last_name }}{% endcapture %}
-
 <!-- Standard metadata -->
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -169,10 +168,11 @@
         {% capture link %}https://www.researchgate.net/profile/{{ social[1] }}/{% endcapture %}
         {% assign sameaslinks = sameaslinks | push: link %}
       {% when 'rss_icon' %}
-        {% comment %}
-          {% capture link %}{{ site.baseurl }}/feed.xml{% endcapture %}
-          {% assign sameaslinks = sameaslinks | push: link %}
-        {% endcomment %}
+        {% if social[1] == true %}
+          <a href="{{ site.baseurl }}/feed.xml" title="RSS Feed">
+            <i class="fa-solid fa-square-rss"></i>
+          </a>
+        {% endif %}
       {% when 'scholar_userid' %}
         {% capture link %}https://scholar.google.com/citations?user={{ social[1] }}{% endcapture %}
         {% assign sameaslinks = sameaslinks | push: link %}
@@ -225,20 +225,19 @@
 
   <script type="application/ld+json">
     {
-        "author":
-        {
-            "@type": "Person",
-            "name": "{{ author_name }}"
-        },
-        "url": "{{ page.url | prepend: site.baseurl | prepend: site.url }}",
-        "@type": "{% if is_blog_post %}BlogPosting{% else %}WebSite{% endif %}",
-        "description": "{% if page.description %}{{ page.description }}{% else if site.description %}{{ site.description }}{% endif %}",
-        "headline": "{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}",
-        {% if sameaslinks != blank %}
+      "author": {
+        "@type": "Person",
+        "name": "{{ author_name }}"
+      },
+      "url": "{{ page.url | prepend: site.baseurl | prepend: site.url }}",
+      "@type": "{% if is_blog_post %} BlogPosting{% else %}WebSite{% endif %}",
+      "description": "{% if page.description %} {{ page.description }}{% else if site.description %}{{ site.description }}{% endif %}",
+      "headline": "{% if page.title %} {{ page.title }}{% else %}{{ site.title }}{% endif %}",
+      {% if sameaslinks != blank %}
         "sameAs": {{ sameaslinks | jsonify }},
         {% endif %}
         "name": "{{ author_name }}",
         "@context": "https://schema.org"
-    }
+      }
   </script>
 {% endif %}

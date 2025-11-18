@@ -1,0 +1,58 @@
+name: "CV Generation"
+
+on:
+  workflow_run:
+    workflows: ["Deploy site"]
+    types:
+      - completed
+  workflow_dispatch:
+
+jobs:
+  build_resume:
+    name: build resume using resume.json
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Create PDF directory
+        run: mkdir -p assets/pdf
+
+      - name: Generate LaTeX from resume.json
+        run: |
+          python ./scripts/generate_resume_tex.py ./assets/json/resume.json -o ./assets/pdf/cv.tex
+
+      - name: Generate PDF from LaTeX
+        uses: xu-cheng/latex-action@v4
+        with:
+          root_file: assets/pdf/cv.tex
+          latexmk_use_xelatex: true
+
+      - name: Commit PDF if changed
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        run: |
+          # Move generated PDF to a temporary location
+          mv cv.pdf assets/pdf/cv.pdf
+
+          # Fetch gh-pages locally
+          git fetch origin gh-pages:gh-pages
+
+          # Check out the gh-pages branch
+          git checkout gh-pages
+
+          # Configure commit identity (this is what you asked about)
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          # Stage PDF
+          git add assets/pdf/cv.pdf
+
+          # Skip commit if nothing changed
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+            exit 0
+          fi
+
+          git commit -m "ci: automatic pdf generation"
+          git push origin gh-pages

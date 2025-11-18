@@ -10,8 +10,10 @@
   --global-code-bg-color: #{$code-bg-color-light};
   --global-text-color: #{$black-color};
   --global-text-color-light: #{$grey-color};
-  --global-theme-color: #{$purple-color};
-  --global-hover-color: #{$purple-color};
+  --global-theme-color: #{$theme-primary-color-light};
+  --global-theme-color-rgb: #{color.channel($theme-primary-color-light, "red", $space: rgb)},
+    #{color.channel($theme-primary-color-light, "green", $space: rgb)}, #{color.channel($theme-primary-color-light, "blue", $space: rgb)};
+  --global-hover-color: #{$theme-primary-color-light};
   --global-hover-text-color: #{$white-color};
   --global-footer-bg-color: #{$grey-color-dark};
   --global-footer-text-color: #{$grey-color-light};
@@ -24,7 +26,7 @@
     #{color.channel($black-color, "red", $space: rgb)},
     #{color.channel($black-color, "green", $space: rgb)},
     #{color.channel($black-color, "blue", $space: rgb)},
-    0.4
+    0.1
   );
   --global-back-to-top-text-color: #{$white-color};
   --global-newsletter-bg-color: #{$white-color};
@@ -65,7 +67,13 @@
     display: none;
   }
 
+  .auto-invert {
+    // Light theme specific styles for logo
+    filter: brightness(1);
+  }
+
   #back-to-top {
+    border: 1px solid var(--global-theme-color);
     color: var(--global-back-to-top-text-color);
     background: var(--global-back-to-top-bg-color);
     bottom: $back-to-top-bottom;
@@ -82,8 +90,10 @@ html[data-theme="dark"] {
   --global-code-bg-color: #{$code-bg-color-dark};
   --global-text-color: #{$grey-color-light};
   --global-text-color-light: #{$grey-color};
-  --global-theme-color: #{$cyan-color};
-  --global-hover-color: #{$cyan-color};
+  --global-theme-color: #{$theme-primary-color-dark};
+  --global-theme-color-rgb: #{color.channel($theme-primary-color-dark, "red", $space: rgb)},
+    #{color.channel($theme-primary-color-dark, "green", $space: rgb)}, #{color.channel($theme-primary-color-dark, "blue", $space: rgb)};
+  --global-hover-color: #{$theme-primary-color-dark};
   --global-hover-text-color: #{$white-color};
   --global-footer-bg-color: #{$grey-color-light};
   --global-footer-text-color: #{$grey-color-dark};
@@ -121,6 +131,11 @@ html[data-theme="dark"] {
   .only-dark {
     display: block;
   }
+
+  .auto-invert {
+    // Dark theme specific styles for logo - increase brightness for better visibility
+    filter: brightness(0) invert(1);
+  }
 }
 
 html[data-theme-setting="dark"] {
@@ -139,8 +154,9 @@ html[data-theme-setting="dark"] {
   }
 
   #back-to-top {
-    color: var(--global-back-to-top-text-color);
+    color: var(--global-theme-color);
     background: var(--global-back-to-top-bg-color);
+    fill: var(--global-theme-color);
   }
 }
 

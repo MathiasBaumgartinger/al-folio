@@ -1,7 +1,7 @@
 ---
 layout: default
 permalink: /blog/
-title: blog
+title: Blog
 nav: true
 nav_order: 1
 pagination:
@@ -64,16 +64,16 @@ pagination:
 {% assign is_even = featured_posts.size | modulo: 2 %}
 <div class="row row-cols-{% if featured_posts.size <= 2 or is_even == 0 %}2{% else %}3{% endif %}">
 {% for post in featured_posts %}
-<div class="col mb-4">
+<div class="col-12 col-md-4 mb-4 d-flex align-items-stretch">
 <a href="{{ post.url | relative_url }}">
-<div class="card hoverable">
-<div class="row g-0">
+<div class="card hoverable glassy-box h-100">
+<div class="row g-0 h-100">
 <div class="col-md-12">
-<div class="card-body">
+<div class="card-body d-flex flex-column h-100">
 <div class="float-right">
 <i class="fa-solid fa-thumbtack fa-xs"></i>
 </div>
-<h3 class="card-title text-lowercase">{{ post.title }}</h3>
+<h3 class="card-title">{{ post.title }}</h3>
 <p class="card-text">{{ post.description }}</p>
 
                     {% if post.external_source == blank %}
@@ -83,7 +83,7 @@ pagination:
                     {% endif %}
                     {% assign year = post.date | date: "%Y" %}
 
-                    <p class="post-meta">
+                    <p class="post-meta mt-auto">
                       {{ read_time }} min read &nbsp; &middot; &nbsp;
                       <a href="{{ year | prepend: '/blog/' | relative_url }}">
                         <i class="fa-solid fa-calendar fa-sm"></i> {{ year }} </a>
@@ -101,7 +101,7 @@ pagination:
 
 {% endif %}
 
-  <ul class="post-list">
+  <ul class="post-list p-3 p-md-auto container">
 
     {% if page.pagination.enabled %}
       {% assign postlist = paginator.posts %}

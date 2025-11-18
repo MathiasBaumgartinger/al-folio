@@ -79,13 +79,24 @@ ninja.data = [{
         },
       },{id: "post-istanbul-the-bridge-between-europe-and-asia",
         
-          title: "Istanbul -- the bridge between Europe and Asia",
+          title: "Istanbul: the bridge between Europe and Asia",
         
         description: "Last stop of 5 months of travel in the &quot;center of the world&quot;: a week in Istanbul.",
         section: "Posts",
         handler: () => {
           
             window.location.href = "/blog/2024/istanbul/";
+          
+        },
+      },{id: "post-vietnam-my-first-culture-shock-positive",
+        
+          title: "Vietnam: my first culture shock (positive)",
+        
+        description: "Exploring the diverse landscapes and cultures of Vietnam.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2024/vietnam/";
           
         },
       },{id: "post-catenary-objects-putting-a-wire-between-two-points-in-3d",
